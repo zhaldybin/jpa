@@ -20,7 +20,6 @@ public class JdbcExample {
         persistBook(book);
         Book selectedBook = getBook(1);
         log.info("Selected book: {}", selectedBook);
-        log.info("Book title length: {}", selectedBook.getTitle().length());
     }
 
     private static Book getBook(long id) {
