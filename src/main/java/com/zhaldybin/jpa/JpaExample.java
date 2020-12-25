@@ -1,5 +1,8 @@
 package com.zhaldybin.jpa;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class JpaExample {
 
     public static void main(String... args) {
@@ -9,6 +12,7 @@ public class JpaExample {
         book.setTitle("title");
         book.setDescription("description");
         book.setCost(12f);
-        repository.save(book);
+        Book savedBook = repository.save(book);
+        log.info("Saved book: {}", savedBook);
     }
 }

@@ -3,15 +3,14 @@ package com.zhaldybin.jpa;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-public class BookRepository {
+public class ConcertRepository {
 
-    public Book save(Book book) {
+    public Concert save(Concert concert) {
         EntityManager entityManager = EntityManagerProvider.getEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        entityManager.persist(book);
+        entityManager.persist(concert);
         transaction.commit();
-        return book;
+        return concert;
     }
-
 }

@@ -4,6 +4,8 @@
     <persistence-unit name="my-persistence-unit">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>com.zhaldybin.jpa.Book</class>
+        <class>com.zhaldybin.jpa.Concert</class>
+        <class>com.zhaldybin.jpa.Musician</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/test" />
