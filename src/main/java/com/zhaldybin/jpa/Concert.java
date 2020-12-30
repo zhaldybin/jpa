@@ -1,13 +1,15 @@
 package com.zhaldybin.jpa;
 
-import lombok.Data;
+import java.time.LocalDate;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import java.time.LocalDate;
-import java.util.Set;
+
+import lombok.Data;
 
 @Data
 @Entity
@@ -19,6 +21,6 @@ public class Concert {
 
     private LocalDate date;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.PERSIST)
     private Set<Musician> musicians;
 }

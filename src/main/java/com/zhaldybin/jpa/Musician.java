@@ -1,11 +1,10 @@
 package com.zhaldybin.jpa;
 
-import lombok.Data;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+
+import lombok.Data;
 
 @Data
 @Entity
@@ -16,7 +15,4 @@ public class Musician {
     private Long id;
 
     private String name;
-
-    @ManyToOne
-    private Concert concert;
 }
