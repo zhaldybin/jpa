@@ -1,16 +1,13 @@
 package com.zhaldybin.jpa;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name = "books")
+@NamedQuery(name = "expensiveBooks", query = "SELECT b FROM Book b WHERE b.cost > 10.0f")
 public class Book {
 
     @Id
